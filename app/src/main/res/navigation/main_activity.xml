@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/main_activity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity"
+    app:startDestination="@id/dialFragment">
 
+    <fragment
+        android:id="@+id/dialFragment"
+        android:name="es.iessaladillo.pedrojoya.quilloque.ui.dial.DialFragment"
+        android:label="dial_fragment"
+        tools:layout="@layout/dial_fragment" />
+    <fragment
+        android:id="@+id/recentFragment"
+        android:name="es.iessaladillo.pedrojoya.quilloque.ui.recent.RecentFragment"
+        android:label="RecentFragment" />
+    <fragment
+        android:id="@+id/contactsFragment"
+        android:name="es.iessaladillo.pedrojoya.quilloque.ui.contacts.ContactsFragment"
+        android:label="ContactsFragment" />
+    <fragment
+        android:id="@+id/addContactFragment"
+        android:name="es.iessaladillo.pedrojoya.quilloque.ui.add.AddContactFragment"
+        android:label="AddContactFragment">
+    <argument
+        android:name="number"
+        app:argType="string" />
+    </fragment>
 </navigation>
